@@ -5,6 +5,7 @@
 
 class AbstractObject {
 public:
+	virtual ~AbstractObject() {}
 	virtual void draw() = 0;
 	virtual void redraw() = 0;
 };
