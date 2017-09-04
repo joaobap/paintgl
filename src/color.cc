@@ -7,20 +7,20 @@
 
 #include "color.h"
 
-Color::Color(int r, int g, int b) : r(r), g(g), b(b) {}
+Color::Color(float r, float g, float b) : r(r), g(g), b(b) {}
 
-int Color::getR() {
+float Color::getR() {
 	return r;
 }
 
-int Color::getG() {
+float Color::getG() {
 	return g;
 }
 
-int Color::getB() {
+float Color::getB() {
 	return b;
 }
 
 void Color::glColor() {
-	glColor3i(r, g, b);
+	glColor3f(r, g, b);
 }
