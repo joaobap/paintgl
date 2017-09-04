@@ -3,15 +3,15 @@
 
 class Color {
 private:
-	int r;
-	int g;
-	int b;
+	float r;
+	float g;
+	float b;
 
 public:
-	Color(int r, int g, int b);
-	int getR();
-	int getG();
-	int getB();
+	Color(float r, float g, float b);
+	float getR();
+	float getG();
+	float getB();
 	void glColor();
 };
 
