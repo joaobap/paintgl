@@ -7,15 +7,25 @@
 #include "object.h"
 
 class Window {
-private:
-	std::vector<std::unique_ptr<AbstractObject>> objects; // Drawn objects
-	std::vector<std::unique_ptr<AbstractObject>> tools;   // Toolbar objects
-	std::vector<std::unique_ptr<AbstractObject>> pallete; // Colour pallete objects
-
 public:
 	int HEIGHT = 800; // Window height
 	int WIDTH = 800;  // Window width
-	
+
+private:
+	std::vector<std::unique_ptr<AbstractObject>> objects; // Drawn objects
+	std::vector<std::unique_ptr<AbstractObject>> pallete; // Color pallete objects;
+	std::vector<std::unique_ptr<AbstractObject>> tools;   // Toolbar objects
+
+	int palleteHeight = 100;
+	int palleteObjectOffset = 10;
+	int palleteObjectSize = 25;
+	int palleteColorStart = HEIGHT - palleteObjectOffset;
+	int palleteToolStart = HEIGHT - palleteObjectSize - palleteObjectOffset * 3;
+
+	void initPallete();
+
+public:
+
 	Window();
 	void init();
 	void changeSize(int height, int width);

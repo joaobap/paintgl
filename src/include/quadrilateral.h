@@ -14,7 +14,7 @@ private:
 	Color color;
 public:
 	Quadrilateral(Point a, Point b, Point c, Point d, Color color);
-
+	virtual ~Quadrilateral();
 	virtual void draw();
 	virtual void redraw();
 };
