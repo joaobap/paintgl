@@ -9,6 +9,8 @@
 Quadrilateral::Quadrilateral(Point a, Point b, Point c, Point d, Color color)
 	: a(a), b(b), c(c), d(d), color(color) {}
 
+Quadrilateral::~Quadrilateral() {}
+
 void Quadrilateral::draw() {
 	glBegin(GL_POLYGON);
 	color.glColor();
@@ -25,5 +27,4 @@ void Quadrilateral::draw() {
 void Quadrilateral::redraw() {
 
 }
-
 
