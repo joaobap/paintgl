@@ -1,11 +1,8 @@
 CXX=clang++
 CXXFLAGS=-std=c++14 -framework OpenGL -framework GLUT
 WARN=-Wno-deprecated-declarations
-INCLUDE=include
-OUT=target/paintgl
+OUT=paintgl
+INCLUDE=src/include
 
 all:
-	$(CXX) -o $(OUT) *.cc $(CXXFLAGS) $(WARN) -I$(INCLUDE)
-
-run:
-	./$(OUT)
+	$(CXX) -o $(OUT) src/*.cpp $(CXXFLAGS) $(WARN) -I$(INCLUDE)
